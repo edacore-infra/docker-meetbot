@@ -1,5 +1,8 @@
 # docker-meetbot
 
+This is based on J J Asghar meetbot docker definition: https://github.com/jjasghar/docker-meetbot but adapted to our needs,
+and grabbing the openstack meetbot which allows #startvote
+
 This is a docker container to get [meetbot](https://wiki.debian.org/MeetBot) running and only needing your specific configurations.
 
 ## Installation
@@ -7,13 +10,13 @@ This is a docker container to get [meetbot](https://wiki.debian.org/MeetBot) run
 Pull the latest version of the image from the docker index. This is the recommended method of installation as it is easier to update image in the future.
 
 ```
-docker pull jjasghar/meetbot:latest
+docker pull edacoreinfra/meetbot:latest
 ```
 
 Alternately you can build the image yourself.
 
 ```
-git clone https://github.com/jjasghar/docker-meetbot.git
+git clone https://github.com/edacoreinfra/docker-meetbot.git
 cd docker-meetbot
 docker build -t="$USER/meetbot" .
 ```
@@ -30,8 +33,7 @@ docker run --name="meetbot-running" -d -p 81:80/tcp \
 
 ```
 
-I have a `meetbot.conf` in the repo that'll connect to freenode, then attempt to connect to `#scr1b3testing`
-to verify everything works.
+It has  a `meetbot.conf` in the repo that'll connect to freenode
 
 When you are ready for this bot to connect and you start using it i suggest
 you pull down the main [meetbot](https://wiki.debian.org/MeetBot) code, and
