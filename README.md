@@ -24,7 +24,10 @@ Run the image
 
 ```
 docker run --name="meetbot-running" -d -p 81:80/tcp \
--v ${PWD}/docker-meetbot:/conf meetbot
+          -v /root/docker-meetbot/conf:/conf \
+          -v /root/docker-meetbot/data:/data \
+          -v /root/docker-meetbot/logs:/logs root/meetbot
+
 ```
 
 I have a `meetbot.conf` in the repo that'll connect to freenode, then attempt to connect to `#scr1b3testing`
