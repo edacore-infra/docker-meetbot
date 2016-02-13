@@ -1,5 +1,5 @@
 [gerrit]
-host=review.edacore.org
+host=review.foss-eda.org
 port=29418
 project=edacore-infra/docker-meetbot
 defaultbranch=master
